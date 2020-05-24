@@ -1,0 +1,16 @@
+.roweach{
+    width:25%;
+    height:500px;
+    margin-top: 1%;
+    float:left;
+    text-align:center;
+}
+@media only screen and (max-width: 800px) {
+    .roweach {
+      height: 300px;
+    }
+}
+.image:hover{
+    transition:0.3s ease;
+    opacity:0.2;
+}
