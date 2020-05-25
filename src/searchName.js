@@ -23,7 +23,6 @@ class App extends Component {
 
         results.forEach((movie,i) => {
           movie.poster_src = "https://image.tmdb.org/t/p/w185" + movie.poster_path
-          // console.log(movie.poster_path)
           const movieRow = <MovieRow updateIndex={this.props.updateIndex} key={movie.id} movie={movie} bgcolor= { i%2===0 ? '#ccccb3' : 'white'}/>
           movieRows.push(movieRow)
         })
@@ -40,9 +39,8 @@ class App extends Component {
 
   searchChangeHandler=(event)=> {
     console.log(event.target.value)
-    const boundObject = this
     const searchTerm = event.target.value
-    boundObject.performSearch(searchTerm)
+    this.performSearch(searchTerm)
   }
 
   render() {

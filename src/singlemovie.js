@@ -11,7 +11,6 @@ class SingleMovie extends React.Component {
   }
 
   performSearch() {
-    console.log("Perform search using moviedb")
     const urlString = "https://api.themoviedb.org/3/movie/" + this.props.movie.id +"?api_key=501d3005a9a3c3c50122dbc9168068aa" ;
     $.ajax({
       url: urlString,
@@ -23,9 +22,6 @@ class SingleMovie extends React.Component {
         console.error("Failed to fetch data")
       }
     })
-
-    
-    
   }
   
 
@@ -59,9 +55,10 @@ rated=(event)=>{
 	let rate_list = JSON.parse(localStorage.getItem('movies_rate') ? localStorage.getItem('movies_rate') : '{}');
 	rate_list[this.props.movie.title]=event;
 	localStorage.setItem('movies_rate', JSON.stringify(rate_list));
-	console.log(rate_list);
-  this.props.updateIndex(1);
-
+  console.log(rate_list);
+  let x=Math.floor((Math.random() * 100) + 1);
+  console.log(x);
+  this.props.updateIndex(x);
 }
 componentWillMount(){
   this.performSearch()
@@ -84,7 +81,7 @@ componentWillMount(){
               <p style={{marginLeft:'30px',textAlign:'left'}}>{ this.state.movie ? this.state.movie.overview: ''}</p>
               <div style={{height:'40px'}}>
                 <h3 style={{marginLeft:'5%',float:'left'}}>Release Date = {this.state.movie ? this.state.movie.release_date: ''}</h3>
-                <h3 style={{marginLeft:'5%',float:'left'}}>Rating Out of 10 = {this.state.movie ? this.state.movie.vote_average: ''}</h3>
+                <h3 style={{marginLeft:'5%',float:'left'}}>Rating = {this.state.movie ? this.state.movie.vote_average: ''}/10</h3>
                 <h3 style={{marginLeft:'5%',float:'left'}}>Budget = {this.state.movie ? this.state.movie.budget: ''} USD</h3>
               </div> 
               <div style={{height:'40px'}}>
