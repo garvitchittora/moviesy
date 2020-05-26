@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/garvitchittora-SGR3-moviesy/static/css/main.da096839.chunk.css",
+    "main.js": "/garvitchittora-SGR3-moviesy/static/js/main.563e257d.chunk.js",
+    "main.js.map": "/garvitchittora-SGR3-moviesy/static/js/main.563e257d.chunk.js.map",
+    "runtime-main.js": "/garvitchittora-SGR3-moviesy/static/js/runtime-main.646d73d9.js",
+    "runtime-main.js.map": "/garvitchittora-SGR3-moviesy/static/js/runtime-main.646d73d9.js.map",
+    "static/css/2.4c6ee7a4.chunk.css": "/garvitchittora-SGR3-moviesy/static/css/2.4c6ee7a4.chunk.css",
+    "static/js/2.81086a4b.chunk.js": "/garvitchittora-SGR3-moviesy/static/js/2.81086a4b.chunk.js",
+    "static/js/2.81086a4b.chunk.js.map": "/garvitchittora-SGR3-moviesy/static/js/2.81086a4b.chunk.js.map",
+    "index.html": "/garvitchittora-SGR3-moviesy/index.html",
+    "precache-manifest.45c1df2c2c4bc942df3d9cf128d87753.js": "/garvitchittora-SGR3-moviesy/precache-manifest.45c1df2c2c4bc942df3d9cf128d87753.js",
+    "service-worker.js": "/garvitchittora-SGR3-moviesy/service-worker.js",
+    "static/css/2.4c6ee7a4.chunk.css.map": "/garvitchittora-SGR3-moviesy/static/css/2.4c6ee7a4.chunk.css.map",
+    "static/css/main.da096839.chunk.css.map": "/garvitchittora-SGR3-moviesy/static/css/main.da096839.chunk.css.map",
+    "static/js/2.81086a4b.chunk.js.LICENSE.txt": "/garvitchittora-SGR3-moviesy/static/js/2.81086a4b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.646d73d9.js",
+    "static/css/2.4c6ee7a4.chunk.css",
+    "static/js/2.81086a4b.chunk.js",
+    "static/css/main.da096839.chunk.css",
+    "static/js/main.563e257d.chunk.js"
+  ]
+}
