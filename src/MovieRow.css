@@ -1,13 +1,22 @@
 .roweach{
     width:25%;
-    height:500px;
+    height:auto;
     margin-top: 1%;
     float:left;
     text-align:center;
 }
+
 @media only screen and (max-width: 800px) {
     .roweach {
-      height: 300px;
+      height: auto;
+      width: 50%;
+      margin-top: 2%;
+    }
+    .button-view{
+        font-size: 10px!important;
+    }
+    h2{
+        font-size: 15px;
     }
 }
 .image:hover{

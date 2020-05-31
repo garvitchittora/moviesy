@@ -13,9 +13,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
   padding-left: 16px;
+  height: 75px;
+}
+.dropdown{
+  margin-top:12px;
+  float: right;
+  margin-right: 10px;
+  font-size:16px;
+  color:white;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -55,7 +62,7 @@ code {
   font-size: 18px;
 }
 
-.footer{
+.footer-logo{
   font-size: 25px ;
   float:left;
   display:inline;
@@ -70,7 +77,38 @@ code {
   text-decoration: none;
   color: white;
   margin-left: 2%;
-  margin-top: 5px;
+  margin-top : 5px;
   float: left;
   display: inline;
+}
+.footer{
+  width: 95%;
+  float:left;
+  display:inline;
+  margin-top: -100px;
+}
+.logo-image{
+  width: 40px;
+}
+@media only screen and (max-width: 800px) {
+  h1{
+    font-size: 20px;
+  }
+  .dropdown{
+    font-size:10px ;
+  }
+  .logo-image{
+    width: 30px;
+  }
+  .footer1{
+    font-size: 15px;
+    margin-left: 0%;
+
+  }
+  .footer-logo{
+    font-size: 15px;
+  }
+  .header{
+    height: 66px;
+  }
 }

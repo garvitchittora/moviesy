@@ -87,15 +87,7 @@ class SeachGener extends Component {
     return (
       <div>
 
-    <AutoComplete
-    style={{ fontSize: 24,
-      display: 'block',
-      width: "99%",
-      paddingTop: 8,
-      paddingBottom: 8,
-      paddingLeft: 16,
-      marginTop:'0'
-     }}
+    <AutoComplete className="input"
     options={options}
     placeholder="🔍 Search By Gener Name"
     filterOption={(inputValue, option) =>

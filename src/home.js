@@ -1,7 +1,7 @@
 import { SearchOutlined, InstagramOutlined ,TwitterOutlined ,FacebookOutlined , GithubOutlined } from '@ant-design/icons';
 import React, { Component } from 'react';
 import {Button} from 'antd';
-
+import './home.css';
 
 class Home extends Component {
     constructor(props) {
@@ -28,21 +28,21 @@ class Home extends Component {
             </tr>
             
             <tr>
-                <img alt='cover' width='99%' style={{opacity:'0.2',backgroundSize:'cover',height:'600px'}} src="background.png" />
+                <img alt='cover' width='99%' className="background-image-home" src="background.png" />
             </tr>
-            <tr style={{ position:'absolute',top:'90%',width: '95%',float:'left',display:'inline'}}>
+            <tr className="footer">
                 <p className='footer1' >© Moviesy 2020 ,All rights reserved</p>  
                 <a href='https://www.instagram.com/garvit_chittora_07/' className='linkfooter'>
-                    <InstagramOutlined className='footer' />
+                    <InstagramOutlined className='footer-logo' />
                 </a>
                 <a href='https://www.facebook.com/garvit.chittora.90/' className='linkfooter'>
-                    <FacebookOutlined className='footer' />
+                    <FacebookOutlined className='footer-logo' />
                 </a>
                 <a href='https://github.com/garvitchittora' className='linkfooter'>
-                    <GithubOutlined className='footer' />
+                    <GithubOutlined className='footer-logo' />
                 </a>
                 <a href='https://twitter.com/ChittoraGarvit' className='linkfooter'>
-                    <TwitterOutlined className='footer' />
+                    <TwitterOutlined className='footer-logo' />
                 </a>
             </tr>
             </tbody>

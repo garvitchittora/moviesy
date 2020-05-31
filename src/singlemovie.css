@@ -1,17 +1,85 @@
 .singleeach{
     width:99%;
-    height:500px;
+    height:auto;
     margin-top: 1%;
     float:left;
     text-align:center;
     margin-left: 0.5%;
 }
-@media only screen and (max-width: 800px) {
-    .singleeach {
-      height: 300px;
-    }
+.title{
+    margin-left:'30px';
+}
+.overview{
+    margin-left:'30px';
+    text-align:'left';
+}
+.img-poster-td{
+    width:30%;
+    float: left;
 }
 .image{
-    width:70%;
-    height:80%;
+    margin: auto;
+    border-radius: 30px;
+    padding: 10px;
+    width: 70%;
+    display: block;
 }
+
+.div-section{
+    height:40px;
+}
+.div-section-rate{
+    height:60px;
+}
+.rate-text{
+    float:left;
+    margin-left:20%;
+}
+@media only screen and (max-width: 800px) {
+    .div-section{
+        float: left;
+        width:100%;
+        margin-top: 0px;
+    }
+    .div-section-rate{
+        float: left;
+        width:100%;
+        margin-top: 0px;
+        margin-top: 10px;
+    }
+    .rate-text{
+        margin-left: 10px;
+        margin-bottom: 0px;
+        margin-top: 5px;
+    }
+    .singleeach {
+      height: auto;
+    }
+    .image{
+        width: 100%;
+    }
+    .img-poster-td{
+        width: 30%;
+        float: left ;
+    }
+    .title{
+        float: left;
+        width:70%;
+    }
+    .overview{
+        text-align: left;
+        float: left;
+        width: 70%;
+        font-size:10px; 
+    }
+    h2{
+        font-size: 12px;
+    }
+    h3{
+        font-size:12px;
+    }
+    .button-watchlist{
+        font-size: 10px!important;
+    }
+}
+

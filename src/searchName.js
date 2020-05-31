@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {}
     this.performSearch("w")
   } 
-
+  
   performSearch(searchTerm) {
     console.log("Perform search using moviedb")
     const urlString = "https://api.themoviedb.org/3/search/movie?&sort_by=popularity.desc&api_key=501d3005a9a3c3c50122dbc9168068aa&query=" + searchTerm
@@ -48,15 +48,7 @@ class App extends Component {
     return (
       <div >
 
-        <input style={{
-          fontSize: 24,
-          display: 'block',
-          width: "100%",
-          paddingTop: 8,
-          paddingBottom: 8,
-          paddingLeft: 16,
-          marginTop:'0'
-        }} onChange={this.searchChangeHandler} placeholder="🔍 Search By Movie Name "/>
+        <input className="input" onChange={this.searchChangeHandler} placeholder="🔍 Search By Movie Name "/>
 
         {this.state.rows}
 

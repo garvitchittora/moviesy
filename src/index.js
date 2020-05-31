@@ -31,7 +31,7 @@ class Initial extends React.Component {
 	render() {
 		const {is_home} = this.state;
 		console.log("in render");
-		var listItems=JSON.parse(localStorage.getItem('movies_wishlist') ? localStorage.getItem('movies_wishlist') : '[]')
+		var listItems=JSON.parse(localStorage.getItem('movies_wishlist') ? localStorage.getItem('movies_wishlist') : '["Empty"]')
 		let menu = []
 		console.log(listItems);
 		if(listItems){
@@ -65,22 +65,22 @@ class Initial extends React.Component {
 				<div className="header">
 						<div className='row1' style={{cursor: 'pointer',display: 'inline'}} onClick={()=>this.handleClick(1)}>
 								<td>
-								<img alt='logo' width='50' style={{marginTop:'-15px'}} src="logo.png" />
+								<img alt='logo' className="logo-image" src="logo.png" />
 								</td>
 								<td>
 								<h1 style={{
-										marginLeft:'25px',textAlign:'center',color:'white',marginBottom:'0'
+										marginLeft:'25px',textAlign:'center',color:'white',marginTop:'10px',marginBottom:'0'
 								}}>Moviesy</h1> 
 								</td>
 						</div>
-						<div style={{display: 'inline',right: '10px',position: 'absolute'}}  >
+						<div style={{display: 'inline',right: '10px',position: 'absolute',marginTop:"10px"}}  >
 								<Dropdown overlay={menu} style={{marginRight:'16px'}}>
-										<a className="ant-dropdown-link" onClick={e => e.preventDefault()} style={{marginTop:'12px',float: 'right',marginRight: '10px',fontSize:'16px',color:'white'}}>
+										<a className="ant-dropdown-link dropdown" onClick={e => e.preventDefault()} >
 										Your Watchlist 
 										</a>
 								</Dropdown>
 								<Dropdown overlay={menu1} style={{marginRight:'16px'}}>
-										<a className="ant-dropdown-link" onClick={e => e.preventDefault()} style={{marginTop:'12px',float: 'right',marginRight: '10px',fontSize:'16px',color:'white'}}>
+										<a className="ant-dropdown-link dropdown" onClick={e => e.preventDefault()} >
 										Your Rating
 										</a>
 								</Dropdown>

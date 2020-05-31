@@ -14,7 +14,7 @@ class MovieRow extends React.Component {
           <div>
             <h2> {this.props.movie.title}</h2>
             <div style={{display:'block'}}>
-              <Button type="primary" onClick={this.viewMovie} >View More Details</Button>
+              <Button type="primary" className="button-view" onClick={this.viewMovie} >View More Details</Button>
             </div>
         </div>
 	</div>,  

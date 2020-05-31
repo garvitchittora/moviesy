@@ -69,42 +69,41 @@ componentWillMount(){
     const value  = wish_list.includes(this.props.movie.title);
     console.log(this.state);
     return (
-        <table key={this.props.movie.id} style={{backgroundColor:this.props.bgcolor}} className='singleeach'>
-        <tbody >
+        <div key={this.props.movie.id} style={{backgroundColor:this.props.bgcolor}} className='singleeach'>
 
-          <tr>
-            <td width='30%' >
-              <img alt="no poster" className='image' style={{borderRadius:'30px',padding: '10px'}} src={this.props.movie.poster_src}/>
-            </td>
-            <td>
-              <h1 style={{marginLeft:'30px'}}>{this.state.movie ? this.state.movie.title: ''}</h1>
-              <p style={{marginLeft:'30px',textAlign:'left'}}>{ this.state.movie ? this.state.movie.overview: ''}</p>
-              <div style={{height:'40px'}}>
+          <div>
+            <div className="img-poster-td">
+              <img alt="no poster" className='image' src={this.props.movie.poster_src}/>
+              
+            </div>
+            <div>
+              <h1 className="title">{this.state.movie ? this.state.movie.title: ''}</h1>
+              <p className="overview">{ this.state.movie ? this.state.movie.overview: ''}</p>
+              <div className="div-section">
                 <h3 style={{marginLeft:'5%',float:'left'}}>Release Date = {this.state.movie ? this.state.movie.release_date: ''}</h3>
                 <h3 style={{marginLeft:'5%',float:'left'}}>Rating = {this.state.movie ? this.state.movie.vote_average: ''}/10</h3>
                 <h3 style={{marginLeft:'5%',float:'left'}}>Budget = {this.state.movie ? this.state.movie.budget: ''} USD</h3>
               </div> 
-              <div style={{height:'40px'}}>
+              <div className="div-section">
                 <h3 style={{marginLeft:'5%',float:'left'}}>Revenue = {this.state.movie ? this.state.movie.revenue: ''} USD</h3>
                 <h3 style={{marginLeft:'5%',float:'left'}}>Runtime = {this.state.movie ? this.state.movie.runtime: ''} minutes</h3>
               </div>
-              <div style={{textAlign:'left',height:'40px'}}>
+              <div style={{textAlign:'left'}} className="div-section">
                 <h3 style={{marginLeft:'5%',float:'left'}}>Tagline = {this.state.movie ? this.state.movie.tagline: ''}</h3>
                 <h3 style={{marginLeft:'5%',float:'left'}}>Genres = {this.state.movie ? this.state.movie.genres.map(genre=> <span>{genre.name},</span>): ''}</h3>
 
               </div>
-              <div style={{marginTop:'30px',height:'40px'}} >
-                <h2 style={{float:"left",marginLeft:'20%'}}>Rate Here </h2>
+              <div  className="div-section-rate">
+                <h2 className="rate-text">Rate Here </h2>
                 <Rate allowHalf defaultValue={2.5} style={{float:"left",marginLeft:'1%'}} onChange={this.rated}/>
 				{value?
-				<Button type="primary" style={{marginLeft:'5%',float:"left"}}  onClick={this.delete_wish_list} danger>Remove To Watchlist</Button>:
-				<Button type="primary" style={{marginLeft:'5%',float:"left"}}  onClick={this.add_wish_list} >Add To Watchlist</Button>
+				<Button type="primary" style={{marginLeft:'5%',float:"left"}} className="button-watchlist" onClick={this.delete_wish_list} danger>Remove To Watchlist</Button>:
+				<Button type="primary" style={{marginLeft:'5%',float:"left"}} className="button-watchlist" onClick={this.add_wish_list} >Add To Watchlist</Button>
 				}
               </div>
-            </td>  
-          </tr>
-        </tbody>
-      </table>
+            </div>  
+          </div>
+      </div>
     )
   }
 }
