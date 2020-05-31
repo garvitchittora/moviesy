@@ -37,6 +37,7 @@
 }
 @media only screen and (max-width: 800px) {
     .div-section{
+        height: auto;
         float: left;
         width:100%;
         margin-top: 0px;
