@@ -7,7 +7,8 @@
     margin-left: 0.5%;
 }
 .title{
-    margin-left:'30px';
+    width: 60%;
+    display: inline-block;
 }
 .overview{
     margin-left:'30px';
@@ -24,12 +25,17 @@
     width: 70%;
     display: block;
 }
-
+.minimise{
+    font-size: 20px;
+}
 .div-section{
     height:40px;
 }
 .div-section-rate{
     height:60px;
+}
+.div-section-tagline{
+    height:80px;
 }
 .rate-text{
     float:left;
@@ -37,6 +43,12 @@
 }
 @media only screen and (max-width: 800px) {
     .div-section{
+        height: auto;
+        float: left;
+        width:100%;
+        margin-top: 0px;
+    }
+    .div-section-tagline{
         height: auto;
         float: left;
         width:100%;
@@ -63,9 +75,12 @@
         width: 30%;
         float: left ;
     }
+    .minimise{
+        font-size: 15px;
+    }
     .title{
         float: left;
-        width:70%;
+        width:60%;
     }
     .overview{
         text-align: left;

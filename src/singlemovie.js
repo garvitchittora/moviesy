@@ -2,6 +2,8 @@ import React from 'react'
 import './singlemovie.css';
 import { Rate,Button } from 'antd';
 import $ from 'jquery'
+import { MinusCircleOutlined } from '@ant-design/icons';
+
 class SingleMovie extends React.Component {
 
   constructor(props) {
@@ -60,6 +62,9 @@ rated=(event)=>{
   console.log(x);
   this.props.updateIndex(x);
 }
+close=()=>{
+  this.props.updateElement(1);
+}
 componentWillMount(){
   this.performSearch()
 }
@@ -78,6 +83,7 @@ componentWillMount(){
             </div>
             <div>
               <h1 className="title">{this.state.movie ? this.state.movie.title: ''}</h1>
+              <MinusCircleOutlined style={{margin:'10px'}} className="minimise" onClick={this.close} />
               <p className="overview">{ this.state.movie ? this.state.movie.overview: ''}</p>
               <div className="div-section">
                 <h3 style={{marginLeft:'5%',float:'left'}}>Release Date = {this.state.movie ? this.state.movie.release_date: ''}</h3>
@@ -88,8 +94,8 @@ componentWillMount(){
                 <h3 style={{marginLeft:'5%',float:'left'}}>Revenue = {this.state.movie ? this.state.movie.revenue: ''} USD</h3>
                 <h3 style={{marginLeft:'5%',float:'left'}}>Runtime = {this.state.movie ? this.state.movie.runtime: ''} minutes</h3>
               </div>
-              <div style={{textAlign:'left'}} className="div-section">
-                <h3 style={{marginLeft:'5%',float:'left'}}>Tagline = {this.state.movie ? this.state.movie.tagline: ''}</h3>
+              <div style={{textAlign:'left'}} className="div-section-tagline">
+                <h3 style={{marginLeft:'5%',float:'left'}}>Tagline = "{this.state.movie ? this.state.movie.tagline: ''}"</h3>
                 <h3 style={{marginLeft:'5%',float:'left'}}>Genres = {this.state.movie ? this.state.movie.genres.map(genre=> <span>{genre.name},</span>): ''}</h3>
 
               </div>

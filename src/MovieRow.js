@@ -1,33 +1,27 @@
 import React from 'react'
 import SingleMovie from './singlemovie.js'
 import './MovieRow.css';
-import { Button } from 'antd';
+import SingleRow from './singleRow.js';
 
 class MovieRow extends React.Component {    
-  constructor(props) {
-    super(props);
-    this.state={
-      element: <div key={this.props.movie.id} className='roweach' >
-          <div style={{width:'100%'}}>
-            <img alt="no poster" width="70%" height="70%" onClick={this.viewMovie} className="image" style={{borderRadius:'30px',padding: '10px',cursor:'pointer'}} src={this.props.movie.poster_src}/>
-          </div>
-          <div>
-            <h2> {this.props.movie.title}</h2>
-            <div style={{display:'block'}}>
-              <Button type="primary" className="button-view" onClick={this.viewMovie} >View More Details</Button>
-            </div>
-        </div>
-	</div>,  
+   state={
+      element:1
     }
-  }
+    updateElement=(value)=>{
+      this.setState({element:value});
+    }
 
-  viewMovie=()=> {
-    const singlemovie=<SingleMovie updateIndex={this.props.updateIndex} movie={this.props.movie} bgcolor={this.props.bgcolor}/>
-    this.setState({element: singlemovie });
-  }
   render() {
-    return this.state.element
-  }
+    return(
+      <>{
+        this.state.element == 1 ?
+          <SingleRow element={this.state.element} updateElement={this.updateElement} movie={this.props.movie}/>
+        :(
+          <SingleMovie updateIndex={this.props.updateIndex} updateElement={this.updateElement} element={this.state.element} movie={this.props.movie} bgcolor={this.props.bgcolor}/>
+        )
+      }</>
+    )
+  } 
 }
 
 export default MovieRow
