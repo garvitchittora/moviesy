@@ -38,7 +38,7 @@ class Initial extends React.Component {
 		menu = (
 				<Menu>
 					{listItems.map(item => 
-						<Menu.Item>{item}</Menu.Item> 
+						<Menu.Item ><p className="list">{item}</p></Menu.Item> 
 					)}
 				</Menu>
 			);
@@ -51,7 +51,7 @@ class Initial extends React.Component {
 			let rated = []
 			for(let key in RateItems){
 					console.log(key, RateItems[key])
-					rated.push(<Menu.Item><p>{key} : <Rate allowHalf defaultValue={RateItems[key]} disabled /> </p> </Menu.Item>) 
+					rated.push(<Menu.Item><p className="list">{key} : <Rate allowHalf defaultValue={RateItems[key]} disabled /> </p> </Menu.Item>) 
 			}
 			menu1 = (
 						<Menu>

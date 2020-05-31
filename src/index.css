@@ -90,6 +90,7 @@ code {
 .logo-image{
   width: 40px;
 }
+
 @media only screen and (max-width: 800px) {
   h1{
     font-size: 20px;
@@ -110,5 +111,8 @@ code {
   }
   .header{
     height: 66px;
+  }
+  .list{
+    font-size: 10px;
   }
 }
