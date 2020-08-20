@@ -4,7 +4,7 @@
 ### Library Used:          ```React ```
 
 
-### Webpage Link :           [Link](https://garvitchittora.github.io/garvitchittora-SGR3-moviesy/build/index.html)
+### Webpage Link :           [Link](https://garvitchittora.github.io/moviesy/build/index.html)
 
 ### Poster:
 
